@@ -2,8 +2,8 @@
 Final Project for CMP 135 
 
 ## Assignment Overview
-This assignment is worth 250 points (25% of the course grade) and must be completed and
-turned in before 11:59pm on Monday, December 04, 2019. The purpose of this project is to
+This assignment is worth 200 points (25% of the course grade) and must be completed and
+turned in before 11:59pm on Sunday, December 13, 2020. The purpose of this project is to
 demonstrate the understanding of all of the courses topics in one project. For this assignment,
 you will create a program that plays the game “Rock, Paper, Scissors.”
 
