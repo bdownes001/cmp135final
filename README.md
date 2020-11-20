@@ -21,30 +21,30 @@ choose Scissors (which beats Paper) most often in an effort to win.
 ## Rules of the Game:
 The objective of Rock, Paper, Scissors is to defeat your opponent by selecting a weapon that
 defeats their choice under the following rules:
-• Rock smashes (or blunts) Scissors, so Rock wins
-• Scissors cut Paper, so Scissors win
-• Paper covers Rock, so Paper wins
-• If players choose the same weapon, neither win and the game is played again
+- Rock smashes (or blunts) Scissors, so Rock wins
+- Scissors cut Paper, so Scissors win
+- Paper covers Rock, so Paper wins
+- If players choose the same weapon, neither win and the game is played again
 
 
 ## Program Specifications
 This project requires you to use:
-• input to prompt the user
-• print to print results
-• at least one branching mechanism (if statement)
-• at least one loop (while loop)
-• Boolean logic
+- input to prompt the user
+- print to print results
+- at least one branching mechanism (if statement)
+- at least one loop (while loop)
+- Boolean logic
 
 Your program will allow a human user to play Rock, Paper, Scissors with the computer. Each
 round of the game will have the following structure:
-• The program will choose a weapon (Rock, Paper, Scissors), but its choice will not be
+- The program will choose a weapon (Rock, Paper, Scissors), but its choice will not be
 displayed until later so the user doesn’t see it.
-• The program will announce the beginning of the round and ask the user for his/her
+- The program will announce the beginning of the round and ask the user for his/her
 weapon choice
-• The two weapons will be compared to determine the winner (or a tie) and the results will
+- The two weapons will be compared to determine the winner (or a tie) and the results will
 be displayed by the program
-• The next round will begin, and the game will continue until the user chooses to quit
-• The computer will keep score and print the score when the game ends
+- The next round will begin, and the game will continue until the user chooses to quit
+- The computer will keep score and print the score when the game ends
 
 The computer should select the weapon most likely to beat the user, based on the user’s previous
 choice of weapons. For instance, if the user has selected Paper 3 times but Rock and Scissors
@@ -63,10 +63,10 @@ been used most frequently by the user; in this case the computer may select any 
 
 At the beginning of the game, the user should be prompted for his/her input. The valid choices
 for input are:
-• R or r (Rock)
-• P or p (Paper)
-• S or s (Scissors)
-• Q or q (Quit)
+- R or r (Rock)
+- P or p (Paper)
+- S or s (Scissors)
+- Q or q (Quit)
 
 At the beginning of each round your program should ask the user for an input. If the user inputs
 something other than r, R, p, P, s, S, q or Q, the program should detect the invalid entry and ask
@@ -77,10 +77,10 @@ the round is tied).
 
 At the end of the game (when the user chooses ‘q’ or ‘Q’), your program should display the
 following:
-• The number of rounds the computer has won
-• The number of rounds the user has won
-• The number of rounds that ended in a tie
-• The number of times the user selected each weapon (Rock, Paper, Scissors)
+- The number of rounds the computer has won
+- The number of rounds the user has won
+- The number of rounds that ended in a tie
+- The number of times the user selected each weapon (Rock, Paper, Scissors)
 
 
 ## Deliverables
