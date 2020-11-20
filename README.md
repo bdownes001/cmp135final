@@ -1,4 +1,4 @@
-# cmp135final
+# Intro to Programming Final
 Final Project for CMP 135 
 
 ## Assignment Overview
