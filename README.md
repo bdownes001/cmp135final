@@ -106,6 +106,6 @@ input. Mark in the empty program, using comments, all the subtasks you need to s
    - Once you can do that, can you repeatedly prompt for a character until you see a ‘q’ or ‘Q’ for quit?
    - Once you can do that, can you check for “legal” character responses from the user, and print an error message when an illegal response is given?
    - Next, can you check for legal responses that are in both upper and lower case?
-   Once you can do all that, move on to the next subtask.
+Once you can do all that, move on to the next subtask.
 4. Remember, save the file and run it all the time! It will make debugging the program
 easier.
