@@ -102,12 +102,12 @@ at the top, save it.
 the subtasks that need to be solved. For example, one subtask would be to get proper user
 input. Mark in the empty program, using comments, all the subtasks you need to solve.
 3. Now address one subtask, getting user input. Do this in stages as well. Can you:
-- Prompt for and get a choice (a string) from the user?
-- Once you can do that, can you repeatedly prompt for a character until you see a
+ - Prompt for and get a choice (a string) from the user?
+ - Once you can do that, can you repeatedly prompt for a character until you see a
 ‘q’ or ‘Q’ for quit?
-- Once you can do that, can you check for “legal” character responses from the
-user, and print an error message when an illegal response is given?
-- Next, can you check for legal responses that are in both upper and lower case?
- Once you can do all that, move on to the next subtask.
+ - Once you can do that, can you check for “legal” character responses from the
+   user, and print an error message when an illegal response is given?
+ - Next, can you check for legal responses that are in both upper and lower case?
+   Once you can do all that, move on to the next subtask.
 4. Remember, save the file and run it all the time! It will make debugging the program
 easier.
