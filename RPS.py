@@ -39,7 +39,7 @@ def game_over():
         print(f"{k}: {v}")
 
 
-def player_choice():
+def get_player_choice():
     player = str(input("Which Weapon do you choose: ")).lower()
     # Keep track of weapons used
     if player == 'r':
@@ -52,19 +52,36 @@ def player_choice():
     return player
 
 
-def cpu_choice():
-    cpu = random.choice(weapon_type)
-    # Cheat to see AI's choice
-    #print(f"CHEAT: {cpu}")
+def get_cpu_random_choice():
+    cpu_choice = random.choice(weapon_type)
+    return cpu_choice
 
-    return cpu
+
+def get_cpu_choice():
+    cpu_choice = get_cpu_random_choice()
+    # Cheat to see computers choice
+    # print(f"CHEAT: {cpu}")
+    # ---------------------------------CPU based choice on Players history(hopefully)-----------------------------------
+    if player_weapons['r'] == 0 and player_weapons['p'] == 0 and player_weapons['s'] == 0:
+        return get_cpu_random_choice()
+    else:
+        if player_weapons['r'] > player_weapons['p'] and player_weapons['r'] > player_weapons['s']:
+            cpu_choice = 'p'
+            return cpu_choice
+        elif player_weapons['p'] > player_weapons['r'] and player_weapons['p'] > player_weapons['s']:
+            cpu_choice = 's'
+            return cpu_choice
+        elif player_weapons['s'] > player_weapons['p'] and player_weapons['s'] > player_weapons['r']:
+            cpu_choice = 'r'
+            return cpu_choice
+        return cpu_choice
 
 
 def game_start():
     while True:
-        global cpu_win, player_win, tie_win
-        player_weapon = player_choice()
-        cpu_weapon = cpu_choice()
+        global cpu_win, player_win, tie_win  # Are we not already global outside this function???????
+        player_weapon = get_player_choice()
+        cpu_weapon = get_cpu_choice()
 
         if player_weapon == 'q':
             game_over()
