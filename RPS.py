@@ -55,45 +55,49 @@ def player_choice():
 def cpu_choice():
     cpu = random.choice(weapon_type)
     # Cheat to see AI's choice
-    print(f"CHEAT: {cpu}")
+    #print(f"CHEAT: {cpu}")
 
     return cpu
 
 
+def game_start():
+    while True:
+        global cpu_win, player_win, tie_win
+        player_weapon = player_choice()
+        cpu_weapon = cpu_choice()
+
+        if player_weapon == 'q':
+            game_over()
+            break
+        elif player_weapon == 'help':
+            game_instructions()
+        # --------------------------------------------Lose--------------------------------------
+        elif player_weapon == 'r' and cpu_weapon == 'p':
+            print(f"\nYour choice: {player_weapon}\nComputer choice: {cpu_weapon}.\nYou LOSE\n")
+            cpu_win += 1
+        elif player_weapon == 'p' and cpu_weapon == 's':
+            print(f"\nYour choice: {player_weapon}\nComputer choice: {cpu_weapon}.\nYou LOSE\n")
+            cpu_win += 1
+        elif player_weapon == 's' and cpu_weapon == 'r':
+            print(f"\nYour choice: {player_weapon}\nComputer choice: {cpu_weapon}.\nYou LOSE\n")
+            cpu_win += 1
+        # --------------------------------------------Win--------------------------------------
+        elif player_weapon == 'r' and cpu_weapon == 's':
+            print(f"\nYour choice: {player_weapon}\nComputer choice: {cpu_weapon}.\nYou WIN\n")
+            player_win += 1
+        elif player_weapon == 'p' and cpu_weapon == 'r':
+            print(f"\nYour choice: {player_weapon}\nComputer choice: {cpu_weapon}.\nYou WIN\n")
+            player_win += 1
+        elif player_weapon == 's' and cpu_weapon == 'p':
+            print(f"\nYour choice: {player_weapon}\nComputer choice: {cpu_weapon}.\nYou WIN\n")
+            player_win += 1
+        # --------------------------------------------Tie--------------------------------------
+        elif player_weapon == cpu_weapon:
+            print(f"\nYour choice: {player_weapon}\nComputer choice: {cpu_weapon}.\nTIE\n")
+            tie_win += 1
+        else:
+            print("Not an option. Try again")
+
+
 game_menu()
-
-while True:
-    player_weapon = player_choice()
-    cpu_weapon = cpu_choice()
-
-    if player_weapon == 'q':
-        game_over()
-        break
-    elif player_weapon == 'help':
-        game_instructions()
-    # --------------------------------------------Lose--------------------------------------
-    elif player_weapon == 'r' and cpu_weapon == 'p':
-        print(f"\nYour choice: {player_weapon}\nComputer choice: {cpu_weapon}.\nYou LOSE\n")
-        cpu_win += 1
-    elif player_weapon == 'p' and cpu_weapon == 's':
-        print(f"\nYour choice: {player_weapon}\nComputer choice: {cpu_weapon}.\nYou LOSE\n")
-        cpu_win += 1
-    elif player_weapon == 's' and cpu_weapon == 'r':
-        print(f"\nYour choice: {player_weapon}\nComputer choice: {cpu_weapon}.\nYou LOSE\n")
-        cpu_win += 1
-    # --------------------------------------------Win--------------------------------------
-    elif player_weapon == 'r' and cpu_weapon == 's':
-        print(f"\nYour choice: {player_weapon}\nComputer choice: {cpu_weapon}.\nYou WIN\n")
-        player_win += 1
-    elif player_weapon == 'p' and cpu_weapon == 'r':
-        print(f"\nYour choice: {player_weapon}\nComputer choice: {cpu_weapon}.\nYou WIN\n")
-        player_win += 1
-    elif player_weapon == 's' and cpu_weapon == 'p':
-        print(f"\nYour choice: {player_weapon}\nComputer choice: {cpu_weapon}.\nYou WIN\n")
-        player_win += 1
-    # --------------------------------------------Tie--------------------------------------
-    elif player_weapon == cpu_weapon:
-        print(f"\nYour choice: {player_weapon}\nComputer choice: {cpu_weapon}.\nTIE\n")
-        tie_win += 1
-    else:
-        print("Not an option. Try again")
+game_start()
