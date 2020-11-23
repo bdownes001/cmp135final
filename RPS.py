@@ -40,32 +40,31 @@ def game_over():
 
 
 def player_choice():
-    player_weapon = str(input("Which Weapon do you choose: ")).lower()
-    # Check users input and store in dictionary
-    if player_weapon == 'r':
+    player = str(input("Which Weapon do you choose: ")).lower()
+    # Keep track of weapons used
+    if player == 'r':
         player_weapons['r'] += 1
-    elif player_weapon == 'p':
+    elif player == 'p':
         player_weapons['p'] += 1
-    elif player_weapon == 's':
+    elif player == 's':
         player_weapons['s'] += 1
 
-    return player_weapon
+    return player
+
+
+def cpu_choice():
+    cpu = random.choice(weapon_type)
+    # Cheat to see AI's choice
+    print(f"CHEAT: {cpu}")
+
+    return cpu
+
 
 game_menu()
 
 while True:
-    cpu_weapon = random.choice(weapon_type)
-
-    # Cheat to see AI's choice
-    print(f"CHEAT: {cpu_weapon}")
-    player_weapon = str(input("Which Weapon do you choose: ")).lower()
-    # Check users input and store in dictionary
-    if player_weapon == 'r':
-        player_weapons['r'] += 1
-    elif player_weapon == 'p':
-        player_weapons['p'] += 1
-    elif player_weapon == 's':
-        player_weapons['s'] += 1
+    player_weapon = player_choice()
+    cpu_weapon = cpu_choice()
 
     if player_weapon == 'q':
         game_over()
@@ -98,4 +97,3 @@ while True:
         tie_win += 1
     else:
         print("Not an option. Try again")
-
