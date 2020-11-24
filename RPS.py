@@ -13,7 +13,7 @@ weapon_type = ["r", "p", "s"]
 
 
 def game_instructions():
-    print("-----------------------------------\n\t\t\t\tHelp\n-----------------------------------")
+    print("-----------------------------------\n\t\tHelp\n-----------------------------------")
     print("Use the terminal to enter a weapon")
     print("'r' for Rock. 'p' for Paper and 's'\nfor Scissor")
     print("To quit the game, enter 'q' to exit")
@@ -21,7 +21,7 @@ def game_instructions():
 
 
 def game_menu():
-    print("-----------------------------------\n\t\t\t\tMenu\n-----------------------------------")
+    print("-----------------------------------\n\t\tMenu\n-----------------------------------")
     print("Welcome to Rock, Paper, Scissor.")
     print("Enter 'help' for game instructions.")
     print("Enter 'q' to exit game.")
@@ -61,9 +61,9 @@ def get_cpu_choice():
     cpu_choice = get_cpu_random_choice()
     # Cheat to see computers choice
     # print(f"CHEAT: {cpu}")
-    # ---------------------------------CPU based choice on Players history(hopefully)-----------------------------------
-    if player_weapons['r'] == 0 and player_weapons['p'] == 0 and player_weapons['s'] == 0:
-        return get_cpu_random_choice()
+    # ---------------------------------CPU choice based on Players history(hopefully)-----------------------------------
+    if player_weapons['r'] == 0 and player_weapons['p'] == 0 and player_weapons['s'] == 0:  # I don't think I need you
+        return get_cpu_random_choice()  # might delete
     else:
         if player_weapons['r'] > player_weapons['p'] and player_weapons['r'] > player_weapons['s']:
             cpu_choice = 'p'
